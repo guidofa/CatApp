@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet fileprivate weak var catImage: UIImageView!
-    var image = ""
+    fileprivate var image = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
