@@ -10,17 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet fileprivate weak var catImage: UIImageView!
+    @IBAction private func buttonOnClick() {
+        getNewImage()
+    }
     fileprivate var image = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         getNewImage()
     }
-    
-    @IBAction private func buttonOnClick() {
-        getNewImage()
-    }
-    
+
     func getNewImage () {
         let url = "https://api.thecatapi.com/v1/images/search?api_key=b18d7524-957f-4abe-8a38-bceb8603e3b9"
         getData(from: url)
@@ -34,9 +33,9 @@ class ViewController: UIViewController {
                 return
             }
             
-            var result: Array<Response>?
+            var result: Array<ResponseForRandomCat>?
             do {
-                result = try JSONDecoder().decode(Array<Response>.self, from: data)
+                result = try JSONDecoder().decode(Array<ResponseForRandomCat>.self, from: data)
             } catch {
                 print("Fail \(error.localizedDescription)")
             }
@@ -52,20 +51,10 @@ class ViewController: UIViewController {
     }
     
     func showUrl() {
-        print(image)
         let url = URL(string: image)
         let data = try? Data(contentsOf: url!)
-       DispatchQueue.main.async {
-           self.catImage.image = UIImage(data: data!)
-       }
-        
+        DispatchQueue.main.async {
+            self.catImage.image = UIImage(data: data!)
+        }
     }
-}
-
-struct Response: Codable {
-    let breeds: [String]?
-    let id: String?
-    let url: String?
-    let width: Int?
-    let height: Int?
 }

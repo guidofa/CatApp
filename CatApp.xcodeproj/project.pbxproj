@@ -13,6 +13,7 @@
 		12ED8C5725166B4400EAB428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12ED8C5525166B4400EAB428 /* Main.storyboard */; };
 		12ED8C5925166B4600EAB428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12ED8C5825166B4600EAB428 /* Assets.xcassets */; };
 		12ED8C5C25166B4600EAB428 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12ED8C5A25166B4600EAB428 /* LaunchScreen.storyboard */; };
+		12ED8C6425168B0C00EAB428 /* ResponseForRandomCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C6325168B0C00EAB428 /* ResponseForRandomCat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		12ED8C5825166B4600EAB428 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12ED8C5B25166B4600EAB428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12ED8C5D25166B4600EAB428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12ED8C6325168B0C00EAB428 /* ResponseForRandomCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseForRandomCat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				12ED8C5825166B4600EAB428 /* Assets.xcassets */,
 				12ED8C5A25166B4600EAB428 /* LaunchScreen.storyboard */,
 				12ED8C5D25166B4600EAB428 /* Info.plist */,
+				12ED8C6325168B0C00EAB428 /* ResponseForRandomCat.swift */,
 			);
 			path = CatApp;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12ED8C6425168B0C00EAB428 /* ResponseForRandomCat.swift in Sources */,
 				12ED8C5425166B4400EAB428 /* ViewController.swift in Sources */,
 				12ED8C5025166B4400EAB428 /* AppDelegate.swift in Sources */,
 				12ED8C5225166B4400EAB428 /* SceneDelegate.swift in Sources */,
