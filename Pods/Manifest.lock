@@ -1,16 +1,20 @@
 PODS:
+  - SideMenu (6.4.9)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - SideMenu
   - SwiftyJSON
 
 SPEC REPOS:
   trunk:
+    - SideMenu
     - SwiftyJSON
 
 SPEC CHECKSUMS:
+  SideMenu: 8ef57a3cfc024a2d3fc1c036c7fe98537baec9e0
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 01a4bc529aecc693aea60ad7df1ea1c0ba22f2ad
+PODFILE CHECKSUM: a65ca0dfae699f803868511d5e191fe32444b968
 
 COCOAPODS: 1.9.1
