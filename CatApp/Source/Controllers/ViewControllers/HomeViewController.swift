@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  CatApp
 //
 //  Created by Macbook Pro Nimble on 9/19/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     @IBOutlet fileprivate weak var catImage: UIImageView!
     @IBAction private func buttonOnClick() {
         getNewImage()
