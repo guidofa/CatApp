@@ -9,4 +9,5 @@ target 'CatApp' do
 	pod 'SwiftyJSON'
 	pod 'SideMenu'
 	pod 'SVProgressHUD'
+	pod 'Alamofire'
 end
