@@ -73,58 +73,13 @@ class NetworkManager: NSObject {
     
     func reconfigureHeaders() {
         var defaultHeaders = HTTPHeaders.default
-        
-        
-        
-        if let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String {
-            defaultHeaders["X-App-Version"] = appVersion
-        }
-        
-        defaultHeaders["X-Device"] = UIDevice.current.model + " - "
-            + UIDevice.current.systemName + " " + UIDevice.current.systemVersion
-        
-        defaultHeaders["X-API-Version"] = "1.0"
-        defaultHeaders["X-Timestamp"] = "\(Date().timeIntervalSince1970)"
-        defaultHeaders["User-Agent"] = "iOS"
-        
+        defaultHeaders["x-api-key"] = AppConfig.shared.getApiKey()
         let configuration = URLSessionConfiguration.default
         configuration.headers = defaultHeaders
-//        configuration.httpAdditionalHeaders = defaultHeaders
         manager = Alamofire.Session(configuration: configuration)
     }
     
     func stopAllPendingTasks() {
         manager?.session.invalidateAndCancel()
-    }
-    
-    func performMultipart(_ url: String, appendParamsCallback: @escaping (_ multipart: MultipartFormData) -> Void,
-                          completion: @escaping (NetworkResponse)) {
-        
-        var defaultHeaders = HTTPHeaders.default
-        
-        if let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String {
-            defaultHeaders["X-App-Version"] = appVersion
-        }
-        
-        defaultHeaders["X-Device"] = UIDevice.current.model + " - "
-            + UIDevice.current.systemName + " " + UIDevice.current.systemVersion
-        
-        defaultHeaders["X-API-Version"] = "1.0"
-        defaultHeaders["X-Timestamp"] = "\(Date().timeIntervalSince1970)"
-        defaultHeaders["User-Agent"] = "iOS"
-        
-        manager?.upload(multipartFormData: appendParamsCallback,
-                        to: url,
-                        usingThreshold: UInt64.max,
-                        method: .post,
-                        headers: defaultHeaders)
-            .responseJSON(completionHandler: { (result) in
-                            switch result.result {
-                            case .success(let value):
-                                completion(value as AnyObject, nil, result.response)
-                            case .failure(let error):
-                                completion(nil, NSError.initWithMessage(error.localizedDescription), result.response)
-                            }
-                        })
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 
 class AppConfig {
     fileprivate let BaseURL = "https://api.thecatapi.com/v1/"
+    fileprivate let ApiKey = "b18d7524-957f-4abe-8a38-bceb8603e3b9"
     
     public class var shared: AppConfig {
         struct Static {
@@ -20,5 +21,9 @@ class AppConfig {
     
     func getBaseURL() -> String {
         return BaseURL
+    }
+    
+    func getApiKey() -> String {
+        return ApiKey
     }
 }
