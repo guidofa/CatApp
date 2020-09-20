@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0AD8B63348794862B00AE2C5 /* Pods_CatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BAB3C12002E32208AF4A50 /* Pods_CatApp.framework */; };
 		12528D7225173DA100B6B938 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D7125173DA100B6B938 /* BaseWebService.swift */; };
+		12528D7425173FA000B6B938 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D7325173FA000B6B938 /* NetworkManager.swift */; };
+		12528D7725173FFF00B6B938 /* NSError+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D7625173FFF00B6B938 /* NSError+utils.swift */; };
+		12528D7C2517432600B6B938 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D7B2517432600B6B938 /* AppConfig.swift */; };
 		12ED8C5025166B4400EAB428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C4F25166B4400EAB428 /* AppDelegate.swift */; };
 		12ED8C5225166B4400EAB428 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C5125166B4400EAB428 /* SceneDelegate.swift */; };
 		12ED8C5425166B4400EAB428 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C5325166B4400EAB428 /* HomeViewController.swift */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		1115506232488AD0F1C175D6 /* Pods-CatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatApp.debug.xcconfig"; path = "Target Support Files/Pods-CatApp/Pods-CatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		12528D7125173DA100B6B938 /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
+		12528D7325173FA000B6B938 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		12528D7625173FFF00B6B938 /* NSError+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+utils.swift"; sourceTree = "<group>"; };
+		12528D7B2517432600B6B938 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		12ED8C4C25166B4400EAB428 /* CatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12ED8C4F25166B4400EAB428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12ED8C5125166B4400EAB428 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,12 +64,14 @@
 		12528D66251737D700B6B938 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				12528D7525173FE800B6B938 /* Extensions */,
 				12528D6A2517380500B6B938 /* Controllers */,
 				12528D68251737F500B6B938 /* Delegates */,
 				12528D69251737FD00B6B938 /* Helpers */,
 				12528D67251737EB00B6B938 /* Managers */,
 				12528D6D2517385C00B6B938 /* Networking */,
 				12528D6B2517381600B6B938 /* StoryBoards */,
+				12528D7A2517430900B6B938 /* MISC */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -137,8 +145,25 @@
 			isa = PBXGroup;
 			children = (
 				12528D7125173DA100B6B938 /* BaseWebService.swift */,
+				12528D7325173FA000B6B938 /* NetworkManager.swift */,
 			);
 			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		12528D7525173FE800B6B938 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				12528D7625173FFF00B6B938 /* NSError+utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		12528D7A2517430900B6B938 /* MISC */ = {
+			isa = PBXGroup;
+			children = (
+				12528D7B2517432600B6B938 /* AppConfig.swift */,
+			);
+			path = MISC;
 			sourceTree = "<group>";
 		};
 		12ED8C4325166B4400EAB428 = {
@@ -300,7 +325,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12528D7425173FA000B6B938 /* NetworkManager.swift in Sources */,
+				12528D7C2517432600B6B938 /* AppConfig.swift in Sources */,
 				12ED8C6425168B0C00EAB428 /* ResponseForRandomCat.swift in Sources */,
+				12528D7725173FFF00B6B938 /* NSError+utils.swift in Sources */,
 				12ED8C5425166B4400EAB428 /* HomeViewController.swift in Sources */,
 				12ED8C5025166B4400EAB428 /* AppDelegate.swift in Sources */,
 				12528D7225173DA100B6B938 /* BaseWebService.swift in Sources */,
