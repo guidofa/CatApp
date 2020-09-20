@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (5.2.2)
+  - SideMenu (6.4.9)
+  - SVProgressHUD (2.2.5)
+  - SwiftLint (0.39.2)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - SideMenu
+  - SVProgressHUD
+  - SwiftLint
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SideMenu
+    - SVProgressHUD
+    - SwiftLint
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  SideMenu: 8ef57a3cfc024a2d3fc1c036c7fe98537baec9e0
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: 1220dbaa5337b5de40c3fac84c6f1a474c6bcfec
+
+COCOAPODS: 1.9.1
