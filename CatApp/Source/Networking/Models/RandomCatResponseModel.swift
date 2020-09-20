@@ -1,5 +1,5 @@
 //
-//  ResponseForRandomCat.swift
+//  RandomCatResponseModel.swift
 //  CatApp
 //
 //  Created by Macbook Pro Nimble on 9/19/20.
