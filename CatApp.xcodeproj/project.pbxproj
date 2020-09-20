@@ -13,6 +13,8 @@
 		12528D7725173FFF00B6B938 /* NSError+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D7625173FFF00B6B938 /* NSError+utils.swift */; };
 		12528D7C2517432600B6B938 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D7B2517432600B6B938 /* AppConfig.swift */; };
 		12528D7F2517461A00B6B938 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D7E2517461A00B6B938 /* HomeService.swift */; };
+		12528D8125174C9200B6B938 /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D8025174C9200B6B938 /* BreedModel.swift */; };
+		12528D8325174D2300B6B938 /* BreedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D8225174D2300B6B938 /* BreedService.swift */; };
 		12ED8C5025166B4400EAB428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C4F25166B4400EAB428 /* AppDelegate.swift */; };
 		12ED8C5225166B4400EAB428 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C5125166B4400EAB428 /* SceneDelegate.swift */; };
 		12ED8C5425166B4400EAB428 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C5325166B4400EAB428 /* HomeViewController.swift */; };
@@ -29,6 +31,8 @@
 		12528D7625173FFF00B6B938 /* NSError+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+utils.swift"; sourceTree = "<group>"; };
 		12528D7B2517432600B6B938 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		12528D7E2517461A00B6B938 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		12528D8025174C9200B6B938 /* BreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
+		12528D8225174D2300B6B938 /* BreedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedService.swift; sourceTree = "<group>"; };
 		12ED8C4C25166B4400EAB428 /* CatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12ED8C4F25166B4400EAB428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12ED8C5125166B4400EAB428 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				12ED8C6325168B0C00EAB428 /* RandomCatResponseModel.swift */,
+				12528D8025174C9200B6B938 /* BreedModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				12528D7E2517461A00B6B938 /* HomeService.swift */,
+				12528D8225174D2300B6B938 /* BreedService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -340,7 +346,9 @@
 				12528D7C2517432600B6B938 /* AppConfig.swift in Sources */,
 				12ED8C6425168B0C00EAB428 /* RandomCatResponseModel.swift in Sources */,
 				12528D7725173FFF00B6B938 /* NSError+utils.swift in Sources */,
+				12528D8125174C9200B6B938 /* BreedModel.swift in Sources */,
 				12ED8C5425166B4400EAB428 /* HomeViewController.swift in Sources */,
+				12528D8325174D2300B6B938 /* BreedService.swift in Sources */,
 				12ED8C5025166B4400EAB428 /* AppDelegate.swift in Sources */,
 				12528D7F2517461A00B6B938 /* HomeService.swift in Sources */,
 				12528D7225173DA100B6B938 /* BaseWebService.swift in Sources */,

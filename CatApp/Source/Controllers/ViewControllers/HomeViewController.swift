@@ -17,10 +17,12 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        HomeService.getRandomCat({ (randomCat) in
-            print(randomCat.height ?? 0)
+        BreedService.getBreeds({ (breeds) in
+            for breed in breeds {
+                print(breed.name ?? "Unnamed")
+            }
         }) { (error) in
-            print(error?.localizedDescription ?? "")
+            print(error?.localizedDescription ?? "Error")
         }
     }
 }
