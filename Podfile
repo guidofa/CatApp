@@ -6,5 +6,5 @@ target 'CatApp' do
   use_frameworks!
 
   # Pods for CatApp
-
+	pod 'SwiftyJSON'
 end
