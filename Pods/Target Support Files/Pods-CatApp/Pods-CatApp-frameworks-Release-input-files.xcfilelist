@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-CatApp/Pods-CatApp-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework
 ${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
