@@ -7,22 +7,32 @@
 //
 
 import UIKit
+import SideMenu
 
 class HomeViewController: UIViewController {
     @IBOutlet fileprivate weak var catImage: UIImageView!
     @IBAction private func buttonOnClick() {
         // Do something
     }
+    @IBAction private func hamburgerButtonOnClick() {
+        present(sideMenu,animated: true)
+    }
+    
+    fileprivate let sideMenu = SideMenuNavigationController(rootViewController: UIViewController())
     fileprivate var image = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        BreedService.getBreeds({ (breeds) in
-            for breed in breeds {
-                print(breed.name ?? "Unnamed")
-            }
-        }, errorHandler: { (error) -> Void in
-            print(error?.localizedDescription ?? "")
-        })
+        sideMenu.leftSide = true
+        SideMenuManager.default.leftMenuNavigationController = sideMenu
+        SideMenuManager.default.addPanGestureToPresent(toView: view)
     }
 }
+
+//        BreedService.getBreeds({ (breeds) in
+//            for breed in breeds {
+//                print(breed.name ?? "Unnamed")
+//            }
+//        }, errorHandler: { (error) -> Void in
+//            print(error?.localizedDescription ?? "")
+//        })
