@@ -9,8 +9,8 @@
 import Foundation
 
 class AppConfig {
-    fileprivate let BaseURL = "https://api.thecatapi.com/v1/"
-    fileprivate let ApiKey = "b18d7524-957f-4abe-8a38-bceb8603e3b9"
+    fileprivate let baseURL = "https://api.thecatapi.com/v1/"
+    fileprivate let apiKey = "b18d7524-957f-4abe-8a38-bceb8603e3b9"
     
     public class var shared: AppConfig {
         struct Static {
@@ -20,10 +20,10 @@ class AppConfig {
     }
     
     func getBaseURL() -> String {
-        return BaseURL
+        return baseURL
     }
     
     func getApiKey() -> String {
-        return ApiKey
+        return apiKey
     }
 }

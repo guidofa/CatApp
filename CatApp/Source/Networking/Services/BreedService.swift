@@ -26,8 +26,6 @@ class BreedService: BaseWebService {
                 let breedObject = BreedModel(json: breed)
                 breedArray.append(breedObject)
             }
-            
-            
             return callback(breedArray)
         }
     

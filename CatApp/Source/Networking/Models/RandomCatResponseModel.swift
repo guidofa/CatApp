@@ -21,4 +21,3 @@ class RandomCatResponseModel: NSObject {
         height = json["height"].intValue
     }
 }
-

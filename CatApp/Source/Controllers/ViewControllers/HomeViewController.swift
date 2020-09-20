@@ -21,8 +21,8 @@ class HomeViewController: UIViewController {
             for breed in breeds {
                 print(breed.name ?? "Unnamed")
             }
-        }) { (error) in
-            print(error?.localizedDescription ?? "Error")
-        }
+        }, errorHandler: { (error) -> Void in
+            print(error?.localizedDescription ?? "")
+        })
     }
 }

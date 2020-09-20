@@ -23,7 +23,6 @@ class HomeService: BaseWebService {
             let responseArray = response.array
             let randomCatModel = RandomCatResponseModel(json: (responseArray?[0])!)
             
-            
             return callback(randomCatModel)
         }
     
