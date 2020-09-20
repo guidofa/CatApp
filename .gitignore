@@ -27,9 +27,9 @@ DerivedData/
 
 #OSX Files
 
-.DS_Store
-.AppleDouble
-.LSOverride
+*.DS_Store
+*.AppleDouble
+*.LSOverride
 
 ## App packaging
 *.ipa
