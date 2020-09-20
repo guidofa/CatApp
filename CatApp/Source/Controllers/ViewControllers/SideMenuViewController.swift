@@ -10,5 +10,23 @@ import UIKit
 
 class SideMenuViewController: UIViewController {
     @IBOutlet fileprivate var tableView: UITableView!
+    fileprivate let menuItems: [String] = ["Home","Breeds"]
+}
+
+extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as? MenuCell {
+            cell.configure(title: menuItems[indexPath.row])
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }

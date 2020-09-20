@@ -61,6 +61,66 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
         </scene>
+        <!--Side Menu View Controller-->
+        <scene sceneID="78O-2d-k4V">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="I3c-M2-WvY" customClass="SideMenuViewController" customModule="CatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oKu-Wl-Lim">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="89U-n3-hhj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell" id="mmm-AG-QDd" customClass="MenuCell" customModule="CatApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mmm-AG-QDd" id="9dc-Yh-nkK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOT-J8-nMo">
+                                                    <rect key="frame" x="186" y="15" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dOT-J8-nMo" firstAttribute="top" secondItem="9dc-Yh-nkK" secondAttribute="top" constant="15" id="e4l-bc-p6X"/>
+                                                <constraint firstAttribute="bottom" secondItem="dOT-J8-nMo" secondAttribute="bottom" constant="15" id="nuG-ng-Ibs"/>
+                                                <constraint firstItem="dOT-J8-nMo" firstAttribute="centerX" secondItem="9dc-Yh-nkK" secondAttribute="centerX" id="yc1-qq-csH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="dOT-J8-nMo" id="8eJ-hC-ank"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="I3c-M2-WvY" id="V0i-P4-KWX"/>
+                                    <outlet property="delegate" destination="I3c-M2-WvY" id="9MR-m5-Rbg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vpi-OT-Ztj" firstAttribute="bottom" secondItem="89U-n3-hhj" secondAttribute="bottom" id="3Up-1h-gau"/>
+                            <constraint firstItem="89U-n3-hhj" firstAttribute="top" secondItem="Vpi-OT-Ztj" secondAttribute="top" id="LZc-5y-FoA"/>
+                            <constraint firstItem="89U-n3-hhj" firstAttribute="leading" secondItem="Vpi-OT-Ztj" secondAttribute="leading" id="WTz-B1-t1d"/>
+                            <constraint firstItem="Vpi-OT-Ztj" firstAttribute="trailing" secondItem="89U-n3-hhj" secondAttribute="trailing" id="sLL-Bz-yPc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vpi-OT-Ztj"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="89U-n3-hhj" id="7ks-vr-v77"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MkO-Uq-3ew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="-626"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="suf-p8-XtQ">
             <objects>

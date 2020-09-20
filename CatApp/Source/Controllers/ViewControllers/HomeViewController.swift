@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
         present(sideMenu,animated: true)
     }
     
-    fileprivate let sideMenu = SideMenuNavigationController(rootViewController: UIViewController())
+    fileprivate let sideMenu = SideMenuNavigationController(rootViewController: SideMenuViewController())
     fileprivate var image = ""
 
     override func viewDidLoad() {

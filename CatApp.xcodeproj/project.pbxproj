@@ -15,6 +15,7 @@
 		12528D7F2517461A00B6B938 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D7E2517461A00B6B938 /* HomeService.swift */; };
 		12528D8125174C9200B6B938 /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D8025174C9200B6B938 /* BreedModel.swift */; };
 		12528D8325174D2300B6B938 /* BreedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D8225174D2300B6B938 /* BreedService.swift */; };
+		128314892517CE6A001B0C78 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128314882517CE6A001B0C78 /* MenuCell.swift */; };
 		1299D19D25175B210060DCFC /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1299D19C25175B210060DCFC /* SideMenuViewController.swift */; };
 		12ED8C5025166B4400EAB428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C4F25166B4400EAB428 /* AppDelegate.swift */; };
 		12ED8C5225166B4400EAB428 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C5125166B4400EAB428 /* SceneDelegate.swift */; };
@@ -34,6 +35,7 @@
 		12528D7E2517461A00B6B938 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		12528D8025174C9200B6B938 /* BreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
 		12528D8225174D2300B6B938 /* BreedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedService.swift; sourceTree = "<group>"; };
+		128314882517CE6A001B0C78 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		1299D19C25175B210060DCFC /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		12ED8C4C25166B4400EAB428 /* CatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12ED8C4F25166B4400EAB428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		12528D6A2517380500B6B938 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				128314872517CE49001B0C78 /* TableViewCells */,
 				12528D6C2517383000B6B938 /* ViewControllers */,
 			);
 			path = Controllers;
@@ -184,6 +187,14 @@
 				12528D8225174D2300B6B938 /* BreedService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		128314872517CE49001B0C78 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				128314882517CE6A001B0C78 /* MenuCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		12ED8C4325166B4400EAB428 = {
@@ -356,6 +367,7 @@
 				12ED8C5025166B4400EAB428 /* AppDelegate.swift in Sources */,
 				12528D7F2517461A00B6B938 /* HomeService.swift in Sources */,
 				12528D7225173DA100B6B938 /* BaseWebService.swift in Sources */,
+				128314892517CE6A001B0C78 /* MenuCell.swift in Sources */,
 				12ED8C5225166B4400EAB428 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
