@@ -10,4 +10,5 @@ target 'CatApp' do
 	pod 'SideMenu'
 	pod 'SVProgressHUD'
 	pod 'Alamofire'
+	pod 'SwiftLint'
 end
