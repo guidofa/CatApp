@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AD8B63348794862B00AE2C5 /* Pods_CatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BAB3C12002E32208AF4A50 /* Pods_CatApp.framework */; };
+		12528D7225173DA100B6B938 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D7125173DA100B6B938 /* BaseWebService.swift */; };
 		12ED8C5025166B4400EAB428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C4F25166B4400EAB428 /* AppDelegate.swift */; };
 		12ED8C5225166B4400EAB428 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C5125166B4400EAB428 /* SceneDelegate.swift */; };
 		12ED8C5425166B4400EAB428 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C5325166B4400EAB428 /* HomeViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		1115506232488AD0F1C175D6 /* Pods-CatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatApp.debug.xcconfig"; path = "Target Support Files/Pods-CatApp/Pods-CatApp.debug.xcconfig"; sourceTree = "<group>"; };
+		12528D7125173DA100B6B938 /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
 		12ED8C4C25166B4400EAB428 /* CatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12ED8C4F25166B4400EAB428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12ED8C5125166B4400EAB428 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,9 +119,26 @@
 		12528D6D2517385C00B6B938 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				12ED8C6325168B0C00EAB428 /* ResponseForRandomCat.swift */,
+				12528D7025173D7600B6B938 /* DataLayer */,
+				12528D6F25173D5E00B6B938 /* Models */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		12528D6F25173D5E00B6B938 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12ED8C6325168B0C00EAB428 /* ResponseForRandomCat.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12528D7025173D7600B6B938 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				12528D7125173DA100B6B938 /* BaseWebService.swift */,
+			);
+			path = DataLayer;
 			sourceTree = "<group>";
 		};
 		12ED8C4325166B4400EAB428 = {
@@ -284,6 +303,7 @@
 				12ED8C6425168B0C00EAB428 /* ResponseForRandomCat.swift in Sources */,
 				12ED8C5425166B4400EAB428 /* HomeViewController.swift in Sources */,
 				12ED8C5025166B4400EAB428 /* AppDelegate.swift in Sources */,
+				12528D7225173DA100B6B938 /* BaseWebService.swift in Sources */,
 				12ED8C5225166B4400EAB428 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
