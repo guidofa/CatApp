@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AD8B63348794862B00AE2C5 /* Pods_CatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BAB3C12002E32208AF4A50 /* Pods_CatApp.framework */; };
+		121696A52518CA9F0050917A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121696A42518CA9F0050917A /* BaseViewController.swift */; };
 		12528D7225173DA100B6B938 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D7125173DA100B6B938 /* BaseWebService.swift */; };
 		12528D7425173FA000B6B938 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D7325173FA000B6B938 /* NetworkManager.swift */; };
 		12528D7725173FFF00B6B938 /* NSError+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D7625173FFF00B6B938 /* NSError+utils.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		1115506232488AD0F1C175D6 /* Pods-CatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatApp.debug.xcconfig"; path = "Target Support Files/Pods-CatApp/Pods-CatApp.debug.xcconfig"; sourceTree = "<group>"; };
+		121696A42518CA9F0050917A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		12528D7125173DA100B6B938 /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
 		12528D7325173FA000B6B938 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		12528D7625173FFF00B6B938 /* NSError+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+utils.swift"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		12528D6C2517383000B6B938 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				121696A42518CA9F0050917A /* BaseViewController.swift */,
 				12ED8C5325166B4400EAB428 /* HomeViewController.swift */,
 				1299D19C25175B210060DCFC /* SideMenuViewController.swift */,
 			);
@@ -361,6 +364,7 @@
 				12ED8C6425168B0C00EAB428 /* RandomCatResponseModel.swift in Sources */,
 				12528D7725173FFF00B6B938 /* NSError+utils.swift in Sources */,
 				1299D19D25175B210060DCFC /* SideMenuViewController.swift in Sources */,
+				121696A52518CA9F0050917A /* BaseViewController.swift in Sources */,
 				12528D8125174C9200B6B938 /* BreedModel.swift in Sources */,
 				12ED8C5425166B4400EAB428 /* HomeViewController.swift in Sources */,
 				12528D8325174D2300B6B938 /* BreedService.swift in Sources */,

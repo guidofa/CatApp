@@ -9,22 +9,12 @@
 import UIKit
 import SideMenu
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     @IBOutlet fileprivate weak var catImage: UIImageView!
     @IBAction private func buttonOnClick() {
         // Do something
     }
-    @IBAction private func hamburgerButtonOnClick() {
-        if let sideMenu = UIStoryboard(name: "Main", bundle: nil)
-            .instantiateViewController(withIdentifier: "SideMenuViewController")
-            as? SideMenuViewController {
-            let menu = SideMenuNavigationController(rootViewController: sideMenu)
-            menu.leftSide = true
-            SideMenuManager.default.leftMenuNavigationController = menu
-            SideMenuManager.default.addPanGestureToPresent(toView: view)
-            present(menu, animated: true, completion: nil)
-        }
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
