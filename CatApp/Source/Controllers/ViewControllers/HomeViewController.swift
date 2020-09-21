@@ -15,17 +15,19 @@ class HomeViewController: UIViewController {
         // Do something
     }
     @IBAction private func hamburgerButtonOnClick() {
-        present(sideMenu,animated: true)
+        if let sideMenu = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "SideMenuViewController")
+            as? SideMenuViewController {
+            let menu = SideMenuNavigationController(rootViewController: sideMenu)
+            menu.leftSide = true
+            SideMenuManager.default.leftMenuNavigationController = menu
+            SideMenuManager.default.addPanGestureToPresent(toView: view)
+            present(menu, animated: true, completion: nil)
+        }
     }
     
-    fileprivate let sideMenu = SideMenuNavigationController(rootViewController: SideMenuViewController())
-    fileprivate var image = ""
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        sideMenu.leftSide = true
-        SideMenuManager.default.leftMenuNavigationController = sideMenu
-        SideMenuManager.default.addPanGestureToPresent(toView: view)
     }
 }
 

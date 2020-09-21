@@ -64,7 +64,7 @@
         <!--Side Menu View Controller-->
         <scene sceneID="78O-2d-k4V">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="I3c-M2-WvY" customClass="SideMenuViewController" customModule="CatApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SideMenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I3c-M2-WvY" customClass="SideMenuViewController" customModule="CatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oKu-Wl-Lim">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
