@@ -10,7 +10,7 @@ import UIKit
 
 class SideMenuViewController: UIViewController {
     @IBOutlet fileprivate var tableView: UITableView!
-    fileprivate let menuItems: [String] = ["Home","Breeds"]
+    fileprivate let menuItems: [String] = ["Home", "Breeds"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

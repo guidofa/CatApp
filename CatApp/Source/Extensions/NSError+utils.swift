@@ -10,12 +10,12 @@ import Foundation
 
 extension NSError {
     static func initWithMessage(_ msg: String) -> NSError {
-        return NSError(domain: "Bambino", code: 1, userInfo: [NSLocalizedDescriptionKey: msg])
+        return NSError(domain: "CatApp", code: 1, userInfo: [NSLocalizedDescriptionKey: msg])
     }
 }
 
 extension Error {
     static func initWithMessage(_ msg: String) -> NSError {
-        return NSError(domain: "Bambino", code: 1, userInfo: [NSLocalizedDescriptionKey: msg])
+        return NSError(domain: "CatApp", code: 1, userInfo: [NSLocalizedDescriptionKey: msg])
     }
 }

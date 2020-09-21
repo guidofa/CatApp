@@ -15,7 +15,6 @@ class HomeViewController: BaseViewController {
         // Do something
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
