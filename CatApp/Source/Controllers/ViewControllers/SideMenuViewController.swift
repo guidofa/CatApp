@@ -11,6 +11,7 @@ import UIKit
 class SideMenuViewController: UIViewController {
     @IBOutlet fileprivate var tableView: UITableView!
     fileprivate let menuItems: [String] = ["Home", "Breeds"]
+    weak var delegate: NavigationDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,5 +33,18 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 1:
+            dismiss(animated: true) {
+                self.delegate?.goToNextView()
+            }
+        case 0:
+            dismiss(animated: true, completion: nil)
+        default:
+            print("error")
+        }
     }
 }

@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_cat_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="MUK-6N-sxK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="MUK-6N-sxK">
                                 <rect key="frame" x="7" y="98" width="400" height="690"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="zC1-s5-9qP"/>
@@ -68,6 +68,37 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
         </scene>
+        <!--Breeds View Controller-->
+        <scene sceneID="Cyl-m8-rtk">
+            <objects>
+                <viewController storyboardIdentifier="BreedsViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hkh-VV-jeF" customClass="BreedsViewController" customModule="CatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xfu-ou-B2A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z4r-qR-ejL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hkh-VV-jeF" id="u3t-hV-Wra"/>
+                                    <outlet property="delegate" destination="Hkh-VV-jeF" id="Fd0-Eg-BUO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kTf-80-EpP" firstAttribute="bottom" secondItem="z4r-qR-ejL" secondAttribute="bottom" id="2W6-Ue-07K"/>
+                            <constraint firstItem="z4r-qR-ejL" firstAttribute="leading" secondItem="kTf-80-EpP" secondAttribute="leading" id="F91-89-ab8"/>
+                            <constraint firstItem="z4r-qR-ejL" firstAttribute="top" secondItem="kTf-80-EpP" secondAttribute="top" id="kDx-dU-ARG"/>
+                            <constraint firstItem="kTf-80-EpP" firstAttribute="trailing" secondItem="z4r-qR-ejL" secondAttribute="trailing" id="wN4-Ta-jie"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kTf-80-EpP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mLa-t9-dZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2276" y="98"/>
+        </scene>
         <!--Side Menu View Controller-->
         <scene sceneID="78O-2d-k4V">
             <objects>
@@ -81,14 +112,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell" id="mmm-AG-QDd" customClass="MenuCell" customModule="CatApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="51"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="51.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mmm-AG-QDd" id="9dc-Yh-nkK">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOT-J8-nMo">
-                                                    <rect key="frame" x="186" y="15" width="42" height="21"/>
+                                                    <rect key="frame" x="186" y="15" width="42" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -149,7 +180,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="error_placeholder" width="626" height="626"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
-        <image name="my_cat_placeholder" width="3024" height="4032"/>
     </resources>
 </document>

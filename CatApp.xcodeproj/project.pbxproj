@@ -13,6 +13,8 @@
 		121696A92518DC9B0050917A /* UIViewcontroller+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121696A82518DC9B0050917A /* UIViewcontroller+utils.swift */; };
 		121696AB251951E40050917A /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121696AA251951E40050917A /* HomeManager.swift */; };
 		121696AD251957340050917A /* UIImage+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121696AC251957340050917A /* UIImage+utils.swift */; };
+		121696AF251982960050917A /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121696AE251982960050917A /* NavigationDelegate.swift */; };
+		121696B1251984070050917A /* BreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121696B0251984070050917A /* BreedsViewController.swift */; };
 		12528D7225173DA100B6B938 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D7125173DA100B6B938 /* BaseWebService.swift */; };
 		12528D7425173FA000B6B938 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D7325173FA000B6B938 /* NetworkManager.swift */; };
 		12528D7725173FFF00B6B938 /* NSError+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D7625173FFF00B6B938 /* NSError+utils.swift */; };
@@ -38,6 +40,8 @@
 		121696A82518DC9B0050917A /* UIViewcontroller+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewcontroller+utils.swift"; sourceTree = "<group>"; };
 		121696AA251951E40050917A /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
 		121696AC251957340050917A /* UIImage+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+utils.swift"; sourceTree = "<group>"; };
+		121696AE251982960050917A /* NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
+		121696B0251984070050917A /* BreedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewController.swift; sourceTree = "<group>"; };
 		12528D7125173DA100B6B938 /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
 		12528D7325173FA000B6B938 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		12528D7625173FFF00B6B938 /* NSError+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+utils.swift"; sourceTree = "<group>"; };
@@ -91,7 +95,7 @@
 				12528D67251737EB00B6B938 /* Managers */,
 				12528D6D2517385C00B6B938 /* Networking */,
 				12528D6B2517381600B6B938 /* StoryBoards */,
-				12528D7A2517430900B6B938 /* MISC */,
+				12528D7A2517430900B6B938 /* Config */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -109,6 +113,7 @@
 			children = (
 				12ED8C4F25166B4400EAB428 /* AppDelegate.swift */,
 				12ED8C5125166B4400EAB428 /* SceneDelegate.swift */,
+				121696AE251982960050917A /* NavigationDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				121696A42518CA9F0050917A /* BaseViewController.swift */,
 				12ED8C5325166B4400EAB428 /* HomeViewController.swift */,
 				1299D19C25175B210060DCFC /* SideMenuViewController.swift */,
+				121696B0251984070050917A /* BreedsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -187,12 +193,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		12528D7A2517430900B6B938 /* MISC */ = {
+		12528D7A2517430900B6B938 /* Config */ = {
 			isa = PBXGroup;
 			children = (
 				12528D7B2517432600B6B938 /* AppConfig.swift */,
 			);
-			path = MISC;
+			path = Config;
 			sourceTree = "<group>";
 		};
 		12528D7D251745F600B6B938 /* Services */ = {
@@ -376,6 +382,7 @@
 				121696A72518D7DF0050917A /* ColorHelper.swift in Sources */,
 				121696AB251951E40050917A /* HomeManager.swift in Sources */,
 				12528D7C2517432600B6B938 /* AppConfig.swift in Sources */,
+				121696B1251984070050917A /* BreedsViewController.swift in Sources */,
 				12ED8C6425168B0C00EAB428 /* RandomCatResponseModel.swift in Sources */,
 				12528D7725173FFF00B6B938 /* NSError+utils.swift in Sources */,
 				1299D19D25175B210060DCFC /* SideMenuViewController.swift in Sources */,
@@ -386,6 +393,7 @@
 				12528D8325174D2300B6B938 /* BreedService.swift in Sources */,
 				12ED8C5025166B4400EAB428 /* AppDelegate.swift in Sources */,
 				12528D7F2517461A00B6B938 /* HomeService.swift in Sources */,
+				121696AF251982960050917A /* NavigationDelegate.swift in Sources */,
 				12528D7225173DA100B6B938 /* BaseWebService.swift in Sources */,
 				128314892517CE6A001B0C78 /* MenuCell.swift in Sources */,
 				12ED8C5225166B4400EAB428 /* SceneDelegate.swift in Sources */,

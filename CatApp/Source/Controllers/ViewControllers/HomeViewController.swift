@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SideMenu
 
 class HomeViewController: BaseViewController {
     @IBOutlet fileprivate weak var catImageView: UIImageView!
@@ -21,19 +20,17 @@ class HomeViewController: BaseViewController {
     }
     
     func setACatImage() {
+        // What happen if the URL is nil ?
         HomeService.getRandomCat({ (randomCat) in
             self.catImageView.load(url: URL(string: randomCat.url!)!)
         }, errorHandler: { (error) -> Void in
             print(error?.localizedDescription ?? "")
         })
-        
     }
 }
 
-//        BreedService.getBreeds({ (breeds) in
-//            for breed in breeds {
-//                print(breed.name ?? "Unnamed")
-//            }
-//        }, errorHandler: { (error) -> Void in
-//            print(error?.localizedDescription ?? "")
-//        })
+extension HomeViewController: NavigationDelegate {
+    func goToNextView() {
+        goToBreeds()
+    }
+}

@@ -7,6 +7,7 @@
 //
 
 import SideMenu
+import UIKit
 
 class BaseViewController: UIViewController {
     @IBAction private func hamburgerButtonOnClick() {
