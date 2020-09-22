@@ -21,9 +21,12 @@ class HomeViewController: BaseViewController {
     
     func setACatImage() {
         // What happen if the URL is nil ?
+        view.showLoader()
         HomeService.getRandomCat({ (randomCat) in
             self.catImageView.load(url: URL(string: randomCat.url!)!)
+            self.view.hideLoader()
         }, errorHandler: { (error) -> Void in
+            self.view.hideLoader()
             print(error?.localizedDescription ?? "")
         })
     }
@@ -31,9 +34,12 @@ class HomeViewController: BaseViewController {
 
 extension HomeViewController: NavigationDelegate {
     func goToNextView() {
+        view.showLoader()
         BreedService.getBreeds({ (breeds) in
+            self.view.hideLoader()
             self.goToBreeds(with: breeds)
         }, errorHandler: { (error) -> Void in
+            self.view.hideLoader()
             print(error?.localizedDescription ?? "")
         })
     }
