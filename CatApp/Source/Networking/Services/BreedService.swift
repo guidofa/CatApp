@@ -11,7 +11,7 @@ import SwiftyJSON
 class BreedService: BaseWebService {
     class func getBreeds(_ callback :@escaping (_ breeds: [BreedModel]) -> Void, errorHandler:@escaping ErrorHandler) {
     
-    let searchURL = BaseWebService.getBaseURL() + "breed"
+    let searchURL = BaseWebService.getBaseURL() + "breeds"
     
     NetworkManager.sharedInstance.GET(searchURL,
                                       params: nil,

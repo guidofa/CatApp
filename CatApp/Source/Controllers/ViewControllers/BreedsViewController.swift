@@ -12,6 +12,18 @@ class BreedsViewController: BaseViewController {
     @IBOutlet fileprivate weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setBreeds()
+    }
+    
+    func setBreeds() {
+        BreedService.getBreeds({ (breeds) in
+            for breed in breeds {
+                print(breed.name ?? "Unnamed")
+            }
+            
+        }, errorHandler: { (error) -> Void in
+            print(error?.localizedDescription ?? "")
+        })
     }
 }
 
@@ -24,11 +36,3 @@ extension BreedsViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
 }
-
-//        BreedService.getBreeds({ (breeds) in
-//            for breed in breeds {
-//                print(breed.name ?? "Unnamed")
-//            }
-//        }, errorHandler: { (error) -> Void in
-//            print(error?.localizedDescription ?? "")
-//        })
