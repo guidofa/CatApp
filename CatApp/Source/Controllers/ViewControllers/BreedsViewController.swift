@@ -10,29 +10,26 @@ import UIKit
 
 class BreedsViewController: BaseViewController {
     @IBOutlet fileprivate weak var tableView: UITableView!
+    var breedsArray: [BreedModel]?
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBreeds()
-    }
-    
-    func setBreeds() {
-        BreedService.getBreeds({ (breeds) in
-            for breed in breeds {
-                print(breed.name ?? "Unnamed")
-            }
-            
-        }, errorHandler: { (error) -> Void in
-            print(error?.localizedDescription ?? "")
-        })
     }
 }
 
 extension BreedsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return breedsArray?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "BreedCell") as? BreedCell {
+            cell.configure(breedName: breedsArray?[indexPath.row].name ?? "")
+            return cell
+        }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
 }

@@ -24,11 +24,12 @@ extension UIViewController {
         }
     }
     
-    func goToBreeds() {
-        if let breeds = UIStoryboard(name: "Main", bundle: nil)
+    func goToBreeds(with breedsArray: [BreedModel]?) {
+        if let breedsViewController = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "BreedsViewController")
-            as? BreedsViewController {
-            navigationController?.pushViewController(breeds, animated: true)
+            as? BreedsViewController, let unwrappedBreeds = breedsArray {
+            breedsViewController.breedsArray = unwrappedBreeds
+            navigationController?.pushViewController(breedsViewController, animated: true)
         }
     }
 }

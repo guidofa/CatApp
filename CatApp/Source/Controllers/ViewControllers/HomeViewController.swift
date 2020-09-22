@@ -31,6 +31,10 @@ class HomeViewController: BaseViewController {
 
 extension HomeViewController: NavigationDelegate {
     func goToNextView() {
-        goToBreeds()
+        BreedService.getBreeds({ (breeds) in
+            self.goToBreeds(with: breeds)
+        }, errorHandler: { (error) -> Void in
+            print(error?.localizedDescription ?? "")
+        })
     }
 }
