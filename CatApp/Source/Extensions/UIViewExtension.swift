@@ -7,4 +7,16 @@
 //
 
 import Foundation
+import SVProgressHUD
 
+extension UIView {
+  func showLoader() {
+    SVProgressHUD.show()
+    self.isUserInteractionEnabled = false
+  }
+  
+  func hideLoader() {
+    SVProgressHUD.dismiss()
+    self.isUserInteractionEnabled = true
+  }
+}
