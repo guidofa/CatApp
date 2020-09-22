@@ -8,7 +8,7 @@
 
 import SwiftyJSON
 
-class BreedModel: NSObject {
+class BreedModel {
     let id: String?
     let name: String?
     

@@ -8,7 +8,7 @@
 
 import SwiftyJSON
 
-class RandomCatResponseModel: NSObject {
+class RandomCatResponseModel {
     let id: String?
     let url: String?
     let width: Int?

@@ -15,7 +15,7 @@ typealias ResponseHandler = (_ data: AnyObject?, _ error: NSError?, _ response: 
 
 let AUTHENTICATION_FAILED_MESSAGE = "Authorization has been denied for this request."
 
-class BaseWebService: NSObject {
+class BaseWebService {
     
     //Must be lowercase and trimmed off "." and white spaced & new lines.
     class func processResponse(_ callback:@escaping SuccessHandler, errorHandler:@escaping ErrorHandler) -> ResponseHandler {

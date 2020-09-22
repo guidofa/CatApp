@@ -10,13 +10,23 @@ import UIKit
 import SideMenu
 
 class HomeViewController: BaseViewController {
-    @IBOutlet fileprivate weak var catImage: UIImageView!
+    @IBOutlet fileprivate weak var catImageView: UIImageView!
     @IBAction private func buttonOnClick() {
-        // Do something
+        setACatImage()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setACatImage()
+    }
+    
+    func setACatImage() {
+        HomeService.getRandomCat({ (randomCat) in
+            self.catImageView.load(url: URL(string: randomCat.url!)!)
+        }, errorHandler: { (error) -> Void in
+            print(error?.localizedDescription ?? "")
+        })
+        
     }
 }
 

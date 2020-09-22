@@ -10,7 +10,7 @@ import Alamofire
 
 typealias NetworkResponse = (_ data: AnyObject?, _ error: NSError?, _ response: HTTPURLResponse?) -> Void
 
-class NetworkManager: NSObject {
+class NetworkManager {
     
     // MARK: Singleton
     class var sharedInstance: NetworkManager {
@@ -22,8 +22,7 @@ class NetworkManager: NSObject {
     
     var manager: Session?
     
-    override init() {
-        super.init()
+    init() {
         reconfigureHeaders()
     }
     
