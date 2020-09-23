@@ -9,7 +9,7 @@
 import SwiftyJSON
 
 class BreedService: BaseWebService {
-    class func getBreeds(_ callback :@escaping (_ breeds: [BreedModel]) -> Void, errorHandler:@escaping ErrorHandler) {
+    class func getBreeds(_ callback: @escaping (_ breeds: [BreedModel]) -> Void, errorHandler: @escaping ErrorHandler) {
     
     let searchURL = BaseWebService.getBaseURL() + "breeds"
     

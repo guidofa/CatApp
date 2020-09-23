@@ -7,7 +7,6 @@
 //
 
 import SwiftyJSON
-import SVProgressHUD
 
 typealias SuccessHandler = (_ data: AnyObject?) -> Void
 typealias ErrorHandler = (_ error: NSError?) -> Void
@@ -18,7 +17,7 @@ let AUTHENTICATION_FAILED_MESSAGE = "Authorization has been denied for this requ
 class BaseWebService {
     
     //Must be lowercase and trimmed off "." and white spaced & new lines.
-    class func processResponse(_ callback:@escaping SuccessHandler, errorHandler:@escaping ErrorHandler) -> ResponseHandler {
+    class func processResponse(_ callback: @escaping SuccessHandler, errorHandler: @escaping ErrorHandler) -> ResponseHandler {
         return { (data, error, response) -> Void in
             
             var customError = error
@@ -42,7 +41,6 @@ class BaseWebService {
                             callback(data)
                             return
                         } else if resp.statusCode == 401 {
-                            SVProgressHUD.dismiss()
                             
                             let data = JSON(data!)
                             if let userIsBlocked = data["blocked"].bool, userIsBlocked == true {

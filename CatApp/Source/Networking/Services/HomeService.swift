@@ -9,7 +9,7 @@
 import SwiftyJSON
 
 class HomeService: BaseWebService {
-    class func getRandomCat(_ callback :@escaping (_ randomcatModel: RandomCatResponseModel) -> Void, errorHandler:@escaping ErrorHandler) {
+    class func getRandomCat(_ callback: @escaping (_ randomcatModel: RandomCatResponseModel) -> Void, errorHandler: @escaping ErrorHandler) {
     
     let searchURL = BaseWebService.getBaseURL() + "images/search"
     
