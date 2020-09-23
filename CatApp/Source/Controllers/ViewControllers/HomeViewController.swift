@@ -23,8 +23,7 @@ class HomeViewController: BaseViewController {
         // What happen if the URL is nil ?
         view.showLoader()
         HomeService.getRandomCat({ (randomCat) in
-            self.catImageView.load(url: URL(string: randomCat.url!)!)
-            self.view.hideLoader()
+            self.catImageView.load(url: URL(string: randomCat.url!)!, view: self.view)
         }, errorHandler: { (error) -> Void in
             self.view.hideLoader()
             print(error?.localizedDescription ?? "")
