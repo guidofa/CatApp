@@ -32,4 +32,13 @@ extension UIViewController {
             navigationController?.pushViewController(breedsViewController, animated: true)
         }
     }
+    
+    func goToBreedDetail(breed: BreedModel) {
+        if let breedDetailViewController = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "BreedDetailViewController")
+            as? BreedDetailViewController {
+            breedDetailViewController.breed = breed
+            navigationController?.pushViewController(breedDetailViewController, animated: true)
+        }
+    }
 }

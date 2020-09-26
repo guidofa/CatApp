@@ -32,4 +32,9 @@ extension BreedsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let selectedBreed = breedsArray?[indexPath.row] else { return }
+        goToBreedDetail(breed: selectedBreed)
+    }
 }
