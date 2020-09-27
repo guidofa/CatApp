@@ -11,7 +11,7 @@ import SVProgressHUD
 
 extension UIView {
   func showLoader() {
-    SVProgressHUD.setDefaultStyle(.light)
+    SVProgressHUD.setDefaultStyle(.dark)
     SVProgressHUD.show(withStatus: "Loading")
     self.isUserInteractionEnabled = false
   }

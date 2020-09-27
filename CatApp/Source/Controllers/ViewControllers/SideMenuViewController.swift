@@ -15,6 +15,8 @@ class SideMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableFooterView = UIView()
+        navigationController?.navigationBar.barTintColor = ColorHelper.cobaltTurquoise()
     }
 }
 

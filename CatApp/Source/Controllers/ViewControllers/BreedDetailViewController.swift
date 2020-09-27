@@ -7,17 +7,31 @@
 //
 
 import UIKit
+import WebKit
 
-class BreedDetailViewController: BaseViewController {
-    @IBOutlet fileprivate var breedNameLabel: UILabel!
+class BreedDetailViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
+    @IBOutlet fileprivate var webView: WKWebView!
     var breed: BreedModel?
     
+    override func loadView() {
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.uiDelegate = self
+        view = webView
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureWithBreed()
+        guard let urlString = breed?.wikiURL else { return }
+        guard let url = URL(string: urlString) else { return }
+        webView.load(URLRequest(url: url))
+        webView.navigationDelegate = self
     }
     
-    func configureWithBreed() {
-        breedNameLabel.text = breed?.name
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        view.showLoader()
+    }
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        view.hideLoader()
     }
 }

@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="MUK-6N-sxK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="MUK-6N-sxK">
                                 <rect key="frame" x="7" y="98" width="400" height="690"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="zC1-s5-9qP"/>
@@ -54,7 +54,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Fw3-mY-BdS">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="line.horizontal.3" catalog="system" id="yDD-g5-zOz">
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="hamburgerButtonOnClick" destination="BYZ-38-t0r" id="m0f-oO-dnd"/>
                             </connections>
@@ -136,23 +136,26 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="89U-n3-hhj">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="0.23529411759999999" green="0.43137254899999999" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.23529411759999999" green="0.43137254899999999" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell" id="mmm-AG-QDd" customClass="MenuCell" customModule="CatApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="59.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="53.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mmm-AG-QDd" id="9dc-Yh-nkK">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="53.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOT-J8-nMo">
-                                                    <rect key="frame" x="180.5" y="15" width="53" height="29.5"/>
-                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="186" y="15" width="42.5" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.23529411759999999" green="0.43137254899999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.23529411759999999" green="0.43137254899999999" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="dOT-J8-nMo" firstAttribute="top" secondItem="9dc-Yh-nkK" secondAttribute="top" constant="15" id="e4l-bc-p6X"/>
                                                 <constraint firstAttribute="bottom" secondItem="dOT-J8-nMo" secondAttribute="bottom" constant="15" id="nuG-ng-Ibs"/>
@@ -191,26 +194,26 @@
         <scene sceneID="wct-TU-SdU">
             <objects>
                 <viewController storyboardIdentifier="BreedDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I6Z-0c-LlU" customClass="BreedDetailViewController" customModule="CatApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rJU-NU-BpP">
+                    <view key="view" contentMode="scaleToFill" id="9Ti-SL-gNK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80k-r5-4xu">
-                                <rect key="frame" x="172" y="429" width="70" height="38"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="33"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zd-Ac-dXx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="80k-r5-4xu" firstAttribute="centerX" secondItem="rJU-NU-BpP" secondAttribute="centerX" id="9QU-wJ-RcZ"/>
-                            <constraint firstItem="80k-r5-4xu" firstAttribute="centerY" secondItem="rJU-NU-BpP" secondAttribute="centerY" id="kNv-h7-7qO"/>
+                            <constraint firstItem="7zd-Ac-dXx" firstAttribute="top" secondItem="lCv-Tb-Cd9" secondAttribute="top" id="7Sh-By-ye3"/>
+                            <constraint firstItem="lCv-Tb-Cd9" firstAttribute="bottom" secondItem="7zd-Ac-dXx" secondAttribute="bottom" id="fot-V1-N2R"/>
+                            <constraint firstItem="7zd-Ac-dXx" firstAttribute="leading" secondItem="lCv-Tb-Cd9" secondAttribute="leading" id="oAQ-IB-Fsa"/>
+                            <constraint firstItem="lCv-Tb-Cd9" firstAttribute="trailing" secondItem="7zd-Ac-dXx" secondAttribute="trailing" id="ssk-mM-Ncq"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="BrK-wO-Vd5"/>
+                        <viewLayoutGuide key="safeArea" id="lCv-Tb-Cd9"/>
                     </view>
                     <connections>
-                        <outlet property="breedNameLabel" destination="80k-r5-4xu" id="PCR-wV-3ps"/>
+                        <outlet property="webView" destination="7zd-Ac-dXx" id="QAj-x2-JvQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ppb-iX-8SG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -238,7 +241,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="error_placeholder" width="626" height="626"/>
+        <image name="cat_placeholder" width="1200" height="1200"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
     </resources>
 </document>

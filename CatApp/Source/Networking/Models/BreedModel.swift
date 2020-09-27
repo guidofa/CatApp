@@ -11,9 +11,11 @@ import SwiftyJSON
 class BreedModel {
     let id: String?
     let name: String?
+    let wikiURL: String?
     
     init(json: JSON) {
         id = json["id"].stringValue
         name = json["name"].stringValue
+        wikiURL = json["wikipedia_url"].stringValue
     }
 }
