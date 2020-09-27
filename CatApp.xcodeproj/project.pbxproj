@@ -94,14 +94,14 @@
 		12528D66251737D700B6B938 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				12528D7525173FE800B6B938 /* Extensions */,
+				12528D7A2517430900B6B938 /* Config */,
 				12528D6A2517380500B6B938 /* Controllers */,
 				12528D68251737F500B6B938 /* Delegates */,
+				12528D7525173FE800B6B938 /* Extensions */,
 				12528D69251737FD00B6B938 /* Helpers */,
 				12528D67251737EB00B6B938 /* Managers */,
 				12528D6D2517385C00B6B938 /* Networking */,
 				12528D6B2517381600B6B938 /* StoryBoards */,
-				12528D7A2517430900B6B938 /* Config */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -118,8 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				12ED8C4F25166B4400EAB428 /* AppDelegate.swift */,
-				12ED8C5125166B4400EAB428 /* SceneDelegate.swift */,
 				121696AE251982960050917A /* NavigationDelegate.swift */,
+				12ED8C5125166B4400EAB428 /* SceneDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -165,9 +165,9 @@
 		12528D6D2517385C00B6B938 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				12528D7D251745F600B6B938 /* Services */,
 				12528D7025173D7600B6B938 /* DataLayer */,
 				12528D6F25173D5E00B6B938 /* Models */,
+				12528D7D251745F600B6B938 /* Services */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -194,8 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				12528D7625173FFF00B6B938 /* NSErrorExtension.swift */,
-				121696A82518DC9B0050917A /* UIViewcontrollerExtension.swift */,
 				121696AC251957340050917A /* UIImageViewExtension.swift */,
+				121696A82518DC9B0050917A /* UIViewcontrollerExtension.swift */,
 				120CC542251AAE0F001C1D1F /* UIViewExtension.swift */,
 			);
 			path = Extensions;
@@ -221,8 +221,8 @@
 		128314872517CE49001B0C78 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				128314882517CE6A001B0C78 /* MenuCell.swift */,
 				12942193251A4078006C401B /* BreedCell.swift */,
+				128314882517CE6A001B0C78 /* MenuCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -248,8 +248,8 @@
 		12ED8C4E25166B4400EAB428 /* CatApp */ = {
 			isa = PBXGroup;
 			children = (
-				12528D66251737D700B6B938 /* Source */,
 				12528D65251737C600B6B938 /* Resources */,
+				12528D66251737D700B6B938 /* Source */,
 			);
 			path = CatApp;
 			sourceTree = "<group>";
