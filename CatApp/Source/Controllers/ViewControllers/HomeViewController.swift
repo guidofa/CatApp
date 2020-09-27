@@ -38,7 +38,7 @@ class HomeViewController: BaseViewController {
     func addTheImageToFavourite() {
         guard let id = imageId else { return }
         FavouriteService.addFavourite(id, subId: "jhondoe123", callback: { (message) in
-            self.showAlert(title: "Favourite", message: message, alertActionTitle: "accept")
+            self.showAlert(title: "Favourite", message: message, alertActionTitle: "Accept")
         }, errorHandler: { (error) -> Void in
             print(error?.localizedDescription ?? "")
         })

@@ -40,27 +40,38 @@
                                     <action selector="buttonOnClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cg1-q5-cV2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="As1-So-1Jb">
-                                <rect key="frame" x="358" y="98" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="As1-So-1Jb">
+                                <rect key="frame" x="339" y="88" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="rnG-Xd-122"/>
+                                    <constraint firstAttribute="width" constant="60" id="160-FN-i4k"/>
+                                    <constraint firstAttribute="height" constant="60" id="rnG-Xd-122"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <color key="tintColor" red="1" green="0.69252461472602744" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="star.fill" catalog="system"/>
                                 <connections>
                                     <action selector="addFavourite" destination="BYZ-38-t0r" eventType="touchUpInside" id="xX5-ee-kd0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to fav" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwh-la-FLo">
+                                <rect key="frame" x="331" y="134" width="76" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.69252461470000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="nwh-la-FLo" firstAttribute="top" secondItem="As1-So-1Jb" secondAttribute="bottom" constant="-14" id="8lv-CC-l4U"/>
                             <constraint firstItem="ygP-n5-GEq" firstAttribute="top" secondItem="MUK-6N-sxK" secondAttribute="bottom" constant="10" id="Q1k-dg-6LJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ygP-n5-GEq" secondAttribute="bottom" constant="14" id="Ytf-8p-vh8"/>
                             <constraint firstItem="MUK-6N-sxK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ZwF-Rt-1i9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="As1-So-1Jb" secondAttribute="trailing" constant="15" id="dDs-RP-oGx"/>
+                            <constraint firstItem="nwh-la-FLo" firstAttribute="centerX" secondItem="As1-So-1Jb" secondAttribute="centerX" id="h6d-q9-Djq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ygP-n5-GEq" secondAttribute="trailing" constant="40" id="i6S-7b-Pzo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="As1-So-1Jb" secondAttribute="trailing" constant="10" id="iE6-1B-F5t"/>
-                            <constraint firstItem="As1-So-1Jb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="nTQ-Lj-54o"/>
+                            <constraint firstItem="As1-So-1Jb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nTQ-Lj-54o"/>
                             <constraint firstItem="ygP-n5-GEq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="qM4-jH-3Cm"/>
-                            <constraint firstItem="As1-So-1Jb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="uhA-i2-25V"/>
                             <constraint firstItem="MUK-6N-sxK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v3F-Gl-Lnv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -256,5 +267,6 @@
     <resources>
         <image name="cat_placeholder" width="1200" height="1200"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
     </resources>
 </document>
