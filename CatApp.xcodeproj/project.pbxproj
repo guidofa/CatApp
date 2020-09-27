@@ -27,6 +27,7 @@
 		128314892517CE6A001B0C78 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128314882517CE6A001B0C78 /* MenuCell.swift */; };
 		12942194251A4078006C401B /* BreedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12942193251A4078006C401B /* BreedCell.swift */; };
 		1299D19D25175B210060DCFC /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1299D19C25175B210060DCFC /* SideMenuViewController.swift */; };
+		12A8486625201BDC007CB00D /* FavouriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A8486525201BDC007CB00D /* FavouriteModel.swift */; };
 		12ED8C5025166B4400EAB428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C4F25166B4400EAB428 /* AppDelegate.swift */; };
 		12ED8C5225166B4400EAB428 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C5125166B4400EAB428 /* SceneDelegate.swift */; };
 		12ED8C5425166B4400EAB428 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C5325166B4400EAB428 /* HomeViewController.swift */; };
@@ -57,6 +58,7 @@
 		128314882517CE6A001B0C78 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		12942193251A4078006C401B /* BreedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCell.swift; sourceTree = "<group>"; };
 		1299D19C25175B210060DCFC /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		12A8486525201BDC007CB00D /* FavouriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteModel.swift; sourceTree = "<group>"; };
 		12ED8C4C25166B4400EAB428 /* CatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12ED8C4F25166B4400EAB428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12ED8C5125166B4400EAB428 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				12ED8C6325168B0C00EAB428 /* RandomCatResponseModel.swift */,
 				12528D8025174C9200B6B938 /* BreedModel.swift */,
+				12A8486525201BDC007CB00D /* FavouriteModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				120CC543251AAE0F001C1D1F /* UIViewExtension.swift in Sources */,
 				121696A72518D7DF0050917A /* ColorHelper.swift in Sources */,
 				121696AB251951E40050917A /* HomeManager.swift in Sources */,
+				12A8486625201BDC007CB00D /* FavouriteModel.swift in Sources */,
 				12528D7C2517432600B6B938 /* AppConfig.swift in Sources */,
 				121696B1251984070050917A /* BreedsViewController.swift in Sources */,
 				12ED8C6425168B0C00EAB428 /* RandomCatResponseModel.swift in Sources */,
