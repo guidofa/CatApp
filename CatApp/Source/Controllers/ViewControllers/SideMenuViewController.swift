@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum MenuOptions {
+    case home
+    case breeds
+    case favourites
+}
 class SideMenuViewController: UIViewController {
     @IBOutlet fileprivate var tableView: UITableView!
     fileprivate let menuItems: [String] = ["Home", "Breeds"]
@@ -22,7 +27,7 @@ class SideMenuViewController: UIViewController {
 
 extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return menuItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -39,9 +44,13 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
+        case 2:
+            dismiss(animated: true) {
+                self.delegate?.goToNextView(.favourites)
+            }
         case 1:
             dismiss(animated: true) {
-                self.delegate?.goToNextView()
+                self.delegate?.goToNextView(.breeds)
             }
         case 0:
             dismiss(animated: true, completion: nil)

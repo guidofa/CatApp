@@ -28,7 +28,7 @@ class FavouriteService: BaseWebService {
                 }
             }
             
-            errorHandler(NSError.initWithMessage("Error adding the image in favourites!"))
+            errorHandler(NSError.initWithMessage("Error adding to favourites"))
             
             }, errorHandler: errorHandler))
     }
