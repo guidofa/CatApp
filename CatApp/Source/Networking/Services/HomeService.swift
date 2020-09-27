@@ -10,13 +10,10 @@ import SwiftyJSON
 
 class HomeService: BaseWebService {
     class func getRandomCat(_ callback: @escaping (_ randomcatModel: RandomCatResponseModel) -> Void, errorHandler: @escaping ErrorHandler) {
-    
     let searchURL = BaseWebService.getBaseURL() + "images/search"
-    
     NetworkManager.sharedInstance.GET(searchURL,
                                       params: nil,
                                       completionHandler: processResponse({ (data) -> Void in
-        
         if data != nil {
             
             let response = JSON(data!)

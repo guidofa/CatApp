@@ -18,34 +18,23 @@ class BaseWebService {
     //Must be lowercase and trimmed off "." and white spaced & new lines.
     class func processResponse(_ callback: @escaping SuccessHandler, errorHandler: @escaping ErrorHandler) -> ResponseHandler {
         return { (data, error, response) -> Void in
-            
             var customError = error
-            
             if error == nil {
                 if let resp = response {
                     if data != nil {
                         let jsonData = JSON(data!)
-                        
                         if let errors = jsonData["errors"].arrayObject {
-                            
                             var errorMsg = "Unknown error"
-                            
                             if let err = errors.first as? String {
                                 errorMsg = err
                             }
-
                             customError = NSError.initWithMessage(errorMsg)
-                            
                         } else if resp.statusCode >= 200 && resp.statusCode < 400 {
                             callback(data)
                             return
                         }  else if let errorDescription = jsonData["error_description"].string {
                             customError = NSError.initWithMessage(errorDescription)
-                        } else if resp.statusCode == 400 {
-                            print("esta saliendo por aca")
-                        } else {
-                            
-                        }
+                        } 
                     }
                 }
             } 

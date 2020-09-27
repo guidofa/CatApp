@@ -42,6 +42,14 @@ class NetworkManager {
                           method: .put)
     }
     
+    func DELETE(_ url: String, params: [String: Any]?, completionHandler:@escaping (NetworkResponse)) {
+        performHTTPMethod(JSONEncoding.default,
+                          url: url,
+                          params: params,
+                          completionHandler: completionHandler,
+                          method: .delete)
+    }
+    
     fileprivate func performHTTPMethod(_ encoding: ParameterEncoding, url: String, params: [String: Any]?, completionHandler:@escaping (NetworkResponse), method: HTTPMethod) {
         
         manager?.request(url, method: method, parameters: params, encoding: encoding, headers: nil)

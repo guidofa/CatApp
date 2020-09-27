@@ -19,8 +19,6 @@ class BaseViewController: UIViewController {
              NSAttributedString.Key.font: UIFont(name: "GillSans", size: 21)!]
     }
     
-    
-    
     @IBAction private func hamburgerButtonOnClick() {
         showSideMenu()
     }

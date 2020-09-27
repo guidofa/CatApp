@@ -9,15 +9,12 @@
 import SwiftyJSON
 
 class FavouriteService: BaseWebService {
-    class func addFavourite(_ imageId: String, subId: String, callback: @escaping (_ message: String) -> Void, errorHandler: @escaping ErrorHandler) {
-        
+    class func addFavourite(_ imageId: String, subId: String, callback: @escaping (_ message: String) -> Void,
+                            errorHandler: @escaping ErrorHandler) {
         let url = BaseWebService.getBaseURL() + "favourites"
         let params = ["image_id": imageId, "sub_id": subId]
-        
         NetworkManager.sharedInstance.POST(url, params: params, completionHandler: processResponse( { (data) -> Void in
-            
             if data != nil {
-                
                 let response = JSON(data!)
                 
                 if let response = response["message"].string {
@@ -26,30 +23,39 @@ class FavouriteService: BaseWebService {
                     return callback("Error")
                 }
             }
-            
             errorHandler(NSError.initWithMessage("Error adding to favourites"))
             
             }, errorHandler: errorHandler))
     }
     
     class func getFavourites(subId: String, callback: @escaping (_ fav: [FavouriteModel]) -> Void, errorHandler: @escaping ErrorHandler) {
-        let url = BaseWebService.getBaseURL() + "favourites" + "?sub_id=jhondoe123"
-        let params = ["sub_id": subId, "limit": "10", "page": "1"]
-        
+        let url = BaseWebService.getBaseURL() + "favourites?sub_id=" + subId
         NetworkManager.sharedInstance.GET(url, params: nil, completionHandler: processResponse( { (data) -> Void in
             if data != nil {
-                
                 var favArray: [FavouriteModel] = []
                 let response = JSON(data!)
                 let responseArray = response.arrayValue
-                for res in responseArray {
-                    favArray.append(FavouriteModel(json: res))
+                for respElement in responseArray {
+                    favArray.append(FavouriteModel(json: respElement))
                 }
-                
                 return callback(favArray)
             }
             errorHandler(NSError.initWithMessage("Error getting the favourites"))
             
+        }, errorHandler: errorHandler))
+    }
+    
+    // This method has not been tried
+    class func deleteFavourite(favId: String, callback: @escaping (_ message: String) -> Void, errorHandler: @escaping ErrorHandler) {
+        let url = BaseWebService.getBaseURL() + "favourites/" + favId
+        NetworkManager.sharedInstance.DELETE(url, params: nil, completionHandler: processResponse( { (data) -> Void in
+            if data != nil {
+                let response = JSON(data!)
+                let message = response["message"].stringValue
+                return callback(message)
+            } else {
+                return callback("No message")
+            }
         }, errorHandler: errorHandler))
     }
 }
