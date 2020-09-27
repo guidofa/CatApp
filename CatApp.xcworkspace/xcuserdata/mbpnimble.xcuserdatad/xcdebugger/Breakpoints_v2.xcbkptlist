@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5B9D378A-5893-43B4-A422-62CE77543C94"
-            shouldBeEnabled = "No"
+            uuid = "AD06A8B7-0F96-4E7F-B4CC-DD2C82880B9D"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CatApp/Source/Controllers/TableViewCells/BreedCell.swift"
+            filePath = "CatApp/Source/Networking/Services/FavouriteService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "configure(breedName:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "getFavourites(subId:callback:errorHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

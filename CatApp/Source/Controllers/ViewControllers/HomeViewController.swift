@@ -36,12 +36,19 @@ class HomeViewController: BaseViewController {
     }
     
     func addTheImageToFavourite() {
-        guard let id = imageId else { return }
-        FavouriteService.addFavourite(id, subId: "jhondoe123", callback: { (message) in
-            self.showAlert(title: "Favourite", message: message, alertActionTitle: "Accept")
+        FavouriteService.getFavourites(subId: "jhondoe123", callback: { (favArray) in
+            for fav in favArray {
+                print(fav.subId)
+            }
         }, errorHandler: { (error) -> Void in
-            self.showAlert(title: "Error", message: "Duplicate", alertActionTitle: "Accept")
+            print("Error")
         })
+//        guard let id = imageId else { return }
+//        FavouriteService.addFavourite(id, subId: "jhondoe123", callback: { (message) in
+//            self.showAlert(title: "Favourite", message: message, alertActionTitle: "Accept")
+//        }, errorHandler: { (error) -> Void in
+//            self.showAlert(title: "Error", message: "Duplicate", alertActionTitle: "Accept")
+//        })
     }
 }
 
