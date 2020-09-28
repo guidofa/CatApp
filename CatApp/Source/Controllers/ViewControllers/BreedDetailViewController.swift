@@ -13,7 +13,7 @@ class BreedDetailViewController: UIViewController, WKUIDelegate, WKNavigationDel
     @IBOutlet fileprivate var webView: WKWebView!
     var breed: BreedModel?
     
-    // Life Cycle
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let urlString = breed?.wikiURL else { return }

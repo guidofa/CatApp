@@ -11,13 +11,15 @@ import UIKit
 class BreedsViewController: BaseViewController {
     @IBOutlet fileprivate weak var tableView: UITableView!
     var breedsArray: [BreedModel]?
+    
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
 
 extension BreedsViewController: UITableViewDelegate, UITableViewDataSource {
-    // UITableViewDelegates and UITableViewDataSource functions.
+    // UITableViewDelegates and UITableViewDataSource functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return breedsArray?.count ?? 0
     }

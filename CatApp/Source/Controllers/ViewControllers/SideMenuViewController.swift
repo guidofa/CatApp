@@ -18,6 +18,7 @@ class SideMenuViewController: UIViewController {
     fileprivate let menuItems: [String] = ["Home", "Breeds"]
     weak var delegate: NavigationDelegate?
     
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()

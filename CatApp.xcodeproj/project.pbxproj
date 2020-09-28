@@ -96,10 +96,11 @@
 		12528D66251737D700B6B938 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				12528D7525173FE800B6B938 /* Extensions */,
 				12528D7A2517430900B6B938 /* Config */,
 				12528D6A2517380500B6B938 /* Controllers */,
+				128314872517CE49001B0C78 /* Cells */,
 				12528D68251737F500B6B938 /* Delegates */,
+				12528D7525173FE800B6B938 /* Extensions */,
 				12528D69251737FD00B6B938 /* Helpers */,
 				12528D6D2517385C00B6B938 /* Networking */,
 				12528D6B2517381600B6B938 /* StoryBoards */,
@@ -128,7 +129,6 @@
 		12528D6A2517380500B6B938 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				128314872517CE49001B0C78 /* TableViewCells */,
 				12528D6C2517383000B6B938 /* ViewControllers */,
 			);
 			path = Controllers;
@@ -213,13 +213,13 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		128314872517CE49001B0C78 /* TableViewCells */ = {
+		128314872517CE49001B0C78 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				128314882517CE6A001B0C78 /* MenuCell.swift */,
 				12942193251A4078006C401B /* BreedCell.swift */,
 			);
-			path = TableViewCells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		12ED8C4325166B4400EAB428 = {

@@ -18,6 +18,7 @@ class HomeViewController: BaseViewController {
     }
     fileprivate var imageId: String?
     
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setACatImage()
@@ -38,9 +39,9 @@ class HomeViewController: BaseViewController {
     func addTheImageToFavourite() {
         guard let id = imageId else { return }
         FavouriteService.addFavourite(id, subId: AppConfig.shared.getUserId(), callback: { (message) in
-            self.showAlert(title: "Favourite", message: message, alertActionTitle: "Accept")
+            self.showAlertWithOneAction(title: message, message: "The image has been successfully added to your favourites", alertActionTitle: "Accept")
         }, errorHandler: { (error) -> Void in
-            self.showAlert(title: "Error", message: "Duplicate", alertActionTitle: "Accept")
+            self.showAlertWithOneAction(title: "Something went wrong", message: "Are you sure that this is image", alertActionTitle: "Accept")
         })
     }
 }
@@ -59,9 +60,8 @@ extension HomeViewController: NavigationDelegate {
             })
         case .favourites:
             print("Go to favourites")
-        default:
-            print("Somethings go wrong")
+        case .home:
+            showAlertWithOneAction(title: "Error", message: "Something went wrong", alertActionTitle: "OK")
         }
-        
     }
 }
