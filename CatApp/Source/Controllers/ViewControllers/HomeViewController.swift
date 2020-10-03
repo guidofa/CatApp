@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     @IBOutlet fileprivate weak var catImageView: UIImageView!
-    @IBAction private func buttonOnClick() {
+    @IBAction private func nextCat() {
         setACatImage()
     }
     @IBAction private func addFavourite() {
@@ -41,7 +41,9 @@ class HomeViewController: BaseViewController {
         FavouriteService.addFavourite(id, subId: AppConfig.shared.getUserId(), callback: { (message) in
             self.showAlertWithOneAction(title: message, message: "The image has been successfully added to your favourites", alertActionTitle: "Accept")
         }, errorHandler: { (error) -> Void in
-            self.showAlertWithOneAction(title: "Something went wrong", message: "Are you sure that this is image", alertActionTitle: "Accept")
+            self.showAlertWithOneAction(title: "Something went wrong",
+                                        message: "Are you sure that this is image is not already in your favourites?",
+                                        alertActionTitle: "Accept")
         })
     }
 }
