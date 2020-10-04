@@ -11,6 +11,7 @@ import Foundation
 class AppConfig {
     fileprivate let baseURL = "https://api.thecatapi.com/v1/"
     fileprivate let apiKey = "b18d7524-957f-4abe-8a38-bceb8603e3b9"
+    fileprivate let userId = "jhondoe123"
     
     public class var shared: AppConfig {
         struct Static {
@@ -25,5 +26,9 @@ class AppConfig {
     
     func getApiKey() -> String {
         return apiKey
+    }
+    
+    func getUserId() -> String {
+        return userId
     }
 }

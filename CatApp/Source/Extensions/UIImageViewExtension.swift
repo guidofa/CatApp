@@ -9,13 +9,15 @@
 import UIKit
 
 extension UIImageView {
-    func load(url: URL, view: UIView) {
+    func load(url: URL, vc: UIViewController) {
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: url) {
                 if let image = UIImage(data: data) {
                     DispatchQueue.main.async {
                         self?.image = image
-                        view.hideLoader()
+                        if let homeView = vc as? HomeViewController {
+                            homeView.imageLoaded()
+                        }
                     }
                 }
             }

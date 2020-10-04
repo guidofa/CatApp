@@ -12,7 +12,6 @@
 		121696A52518CA9F0050917A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121696A42518CA9F0050917A /* BaseViewController.swift */; };
 		121696A72518D7DF0050917A /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121696A62518D7DF0050917A /* ColorHelper.swift */; };
 		121696A92518DC9B0050917A /* UIViewcontrollerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121696A82518DC9B0050917A /* UIViewcontrollerExtension.swift */; };
-		121696AB251951E40050917A /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121696AA251951E40050917A /* HomeManager.swift */; };
 		121696AD251957340050917A /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121696AC251957340050917A /* UIImageViewExtension.swift */; };
 		121696AF251982960050917A /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121696AE251982960050917A /* NavigationDelegate.swift */; };
 		121696B1251984070050917A /* BreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121696B0251984070050917A /* BreedsViewController.swift */; };
@@ -24,13 +23,15 @@
 		12528D8125174C9200B6B938 /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D8025174C9200B6B938 /* BreedModel.swift */; };
 		12528D8325174D2300B6B938 /* BreedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D8225174D2300B6B938 /* BreedService.swift */; };
 		1269FC83251FD21800C1FBC9 /* BreedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1269FC82251FD21800C1FBC9 /* BreedDetailViewController.swift */; };
+		127C8E6925291536002D84B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127C8E6725291536002D84B3 /* Main.storyboard */; };
 		128314892517CE6A001B0C78 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128314882517CE6A001B0C78 /* MenuCell.swift */; };
 		12942194251A4078006C401B /* BreedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12942193251A4078006C401B /* BreedCell.swift */; };
 		1299D19D25175B210060DCFC /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1299D19C25175B210060DCFC /* SideMenuViewController.swift */; };
+		12A8486625201BDC007CB00D /* FavouriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A8486525201BDC007CB00D /* FavouriteModel.swift */; };
+		12A848682520205B007CB00D /* FavouriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A848672520205B007CB00D /* FavouriteService.swift */; };
 		12ED8C5025166B4400EAB428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C4F25166B4400EAB428 /* AppDelegate.swift */; };
 		12ED8C5225166B4400EAB428 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C5125166B4400EAB428 /* SceneDelegate.swift */; };
 		12ED8C5425166B4400EAB428 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C5325166B4400EAB428 /* HomeViewController.swift */; };
-		12ED8C5725166B4400EAB428 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12ED8C5525166B4400EAB428 /* Main.storyboard */; };
 		12ED8C5925166B4600EAB428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12ED8C5825166B4600EAB428 /* Assets.xcassets */; };
 		12ED8C5C25166B4600EAB428 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12ED8C5A25166B4600EAB428 /* LaunchScreen.storyboard */; };
 		12ED8C6425168B0C00EAB428 /* RandomCatResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ED8C6325168B0C00EAB428 /* RandomCatResponseModel.swift */; };
@@ -42,7 +43,6 @@
 		121696A42518CA9F0050917A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		121696A62518D7DF0050917A /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 		121696A82518DC9B0050917A /* UIViewcontrollerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewcontrollerExtension.swift; sourceTree = "<group>"; };
-		121696AA251951E40050917A /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
 		121696AC251957340050917A /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		121696AE251982960050917A /* NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
 		121696B0251984070050917A /* BreedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewController.swift; sourceTree = "<group>"; };
@@ -54,14 +54,16 @@
 		12528D8025174C9200B6B938 /* BreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
 		12528D8225174D2300B6B938 /* BreedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedService.swift; sourceTree = "<group>"; };
 		1269FC82251FD21800C1FBC9 /* BreedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewController.swift; sourceTree = "<group>"; };
+		127C8E6825291536002D84B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		128314882517CE6A001B0C78 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		12942193251A4078006C401B /* BreedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCell.swift; sourceTree = "<group>"; };
 		1299D19C25175B210060DCFC /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		12A8486525201BDC007CB00D /* FavouriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteModel.swift; sourceTree = "<group>"; };
+		12A848672520205B007CB00D /* FavouriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteService.swift; sourceTree = "<group>"; };
 		12ED8C4C25166B4400EAB428 /* CatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12ED8C4F25166B4400EAB428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12ED8C5125166B4400EAB428 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		12ED8C5325166B4400EAB428 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		12ED8C5625166B4400EAB428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12ED8C5825166B4600EAB428 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12ED8C5B25166B4600EAB428 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12ED8C5D25166B4600EAB428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,22 +98,14 @@
 			children = (
 				12528D7A2517430900B6B938 /* Config */,
 				12528D6A2517380500B6B938 /* Controllers */,
+				128314872517CE49001B0C78 /* Cells */,
 				12528D68251737F500B6B938 /* Delegates */,
 				12528D7525173FE800B6B938 /* Extensions */,
 				12528D69251737FD00B6B938 /* Helpers */,
-				12528D67251737EB00B6B938 /* Managers */,
 				12528D6D2517385C00B6B938 /* Networking */,
 				12528D6B2517381600B6B938 /* StoryBoards */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		12528D67251737EB00B6B938 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				121696AA251951E40050917A /* HomeManager.swift */,
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		12528D68251737F500B6B938 /* Delegates */ = {
@@ -135,7 +129,6 @@
 		12528D6A2517380500B6B938 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				128314872517CE49001B0C78 /* TableViewCells */,
 				12528D6C2517383000B6B938 /* ViewControllers */,
 			);
 			path = Controllers;
@@ -144,7 +137,7 @@
 		12528D6B2517381600B6B938 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				12ED8C5525166B4400EAB428 /* Main.storyboard */,
+				127C8E6725291536002D84B3 /* Main.storyboard */,
 				12ED8C5A25166B4600EAB428 /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
@@ -177,6 +170,7 @@
 			children = (
 				12ED8C6325168B0C00EAB428 /* RandomCatResponseModel.swift */,
 				12528D8025174C9200B6B938 /* BreedModel.swift */,
+				12A8486525201BDC007CB00D /* FavouriteModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,17 +208,18 @@
 			children = (
 				12528D7E2517461A00B6B938 /* HomeService.swift */,
 				12528D8225174D2300B6B938 /* BreedService.swift */,
+				12A848672520205B007CB00D /* FavouriteService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		128314872517CE49001B0C78 /* TableViewCells */ = {
+		128314872517CE49001B0C78 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				12942193251A4078006C401B /* BreedCell.swift */,
 				128314882517CE6A001B0C78 /* MenuCell.swift */,
 			);
-			path = TableViewCells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		12ED8C4325166B4400EAB428 = {
@@ -300,7 +295,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Guido Fabio";
 				TargetAttributes = {
 					12ED8C4B25166B4400EAB428 = {
@@ -331,9 +326,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127C8E6925291536002D84B3 /* Main.storyboard in Resources */,
 				12ED8C5C25166B4600EAB428 /* LaunchScreen.storyboard in Resources */,
 				12ED8C5925166B4600EAB428 /* Assets.xcassets in Resources */,
-				12ED8C5725166B4400EAB428 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,8 +385,9 @@
 				12528D7425173FA000B6B938 /* NetworkManager.swift in Sources */,
 				120CC543251AAE0F001C1D1F /* UIViewExtension.swift in Sources */,
 				121696A72518D7DF0050917A /* ColorHelper.swift in Sources */,
-				121696AB251951E40050917A /* HomeManager.swift in Sources */,
+				12A8486625201BDC007CB00D /* FavouriteModel.swift in Sources */,
 				12528D7C2517432600B6B938 /* AppConfig.swift in Sources */,
+				12A848682520205B007CB00D /* FavouriteService.swift in Sources */,
 				121696B1251984070050917A /* BreedsViewController.swift in Sources */,
 				12ED8C6425168B0C00EAB428 /* RandomCatResponseModel.swift in Sources */,
 				1269FC83251FD21800C1FBC9 /* BreedDetailViewController.swift in Sources */,
@@ -415,10 +411,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		12ED8C5525166B4400EAB428 /* Main.storyboard */ = {
+		127C8E6725291536002D84B3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				12ED8C5625166B4400EAB428 /* Base */,
+				127C8E6825291536002D84B3 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -460,6 +456,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -520,6 +517,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

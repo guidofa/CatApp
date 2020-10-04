@@ -10,36 +10,78 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     @IBOutlet fileprivate weak var catImageView: UIImageView!
-    @IBAction private func buttonOnClick() {
+    @IBOutlet fileprivate weak var footerView: UIView!
+    @IBOutlet fileprivate weak var favImageView: UIImageView!
+    @IBAction private func nextCat() {
+        setACatImage()
+    }
+    @IBAction private func addFavourite() {
+        addTheImageToFavourite()
+    }
+    fileprivate var imageId: String?
+    fileprivate enum HeartImages: String {
+        case activeHeart = "heart_active"
+        case inactiveHeart = "heart_inactive"
+    }
+    
+    
+    // MARK: Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        styleFooterView()
         setACatImage()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setACatImage()
+    func styleFooterView() {
+        footerView.layer.borderWidth = 1
+        footerView.layer.borderColor = ColorHelper.cobaltTurquoise().cgColor
     }
     
     func setACatImage() {
-        // What happen if the URL is nil ?
         view.showLoader()
         HomeService.getRandomCat({ (randomCat) in
-            self.catImageView.load(url: URL(string: randomCat.url!)!, view: self.view)
+            self.imageId = randomCat.id
+            self.catImageView.load(url: URL(string: randomCat.url!)!, vc: self)
         }, errorHandler: { (error) -> Void in
             self.view.hideLoader()
             print(error?.localizedDescription ?? "")
         })
+    }
+    
+    func addTheImageToFavourite() {
+        favImageView.image = UIImage(named: HeartImages.activeHeart.rawValue)
+        guard let id = imageId else { return }
+        FavouriteService.addFavourite(id, subId: AppConfig.shared.getUserId(), callback: { (_) in
+            
+        }, errorHandler: { (error) -> Void in
+            self.showAlertWithOneAction(title: "Something went wrong",
+                                        message: "Are you sure that this is image is not already in your favourites?",
+                                        alertActionTitle: "Accept")
+        })
+    }
+    
+    func imageLoaded() {
+        favImageView.image = UIImage(named: HeartImages.inactiveHeart.rawValue)
+        view.hideLoader()
     }
 }
 
 extension HomeViewController: NavigationDelegate {
-    func goToNextView() {
+    func goToNextView(_ toView: MenuOptions) {
         view.showLoader()
-        BreedService.getBreeds({ (breeds) in
-            self.view.hideLoader()
-            self.goToBreeds(with: breeds)
-        }, errorHandler: { (error) -> Void in
-            self.view.hideLoader()
-            print(error?.localizedDescription ?? "")
-        })
+        switch toView {
+        case .breeds:
+            BreedService.getBreeds({ (breeds) in
+                self.view.hideLoader()
+                self.goToBreeds(with: breeds)
+            }, errorHandler: { (error) -> Void in
+                self.view.hideLoader()
+                print(error?.localizedDescription ?? "")
+            })
+        case .favourites:
+            print("Go to favourites")
+        case .home:
+            showAlertWithOneAction(title: "Error", message: "Something went wrong", alertActionTitle: "OK")
+        }
     }
 }

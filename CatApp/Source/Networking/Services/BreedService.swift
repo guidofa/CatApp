@@ -10,15 +10,11 @@ import SwiftyJSON
 
 class BreedService: BaseWebService {
     class func getBreeds(_ callback: @escaping (_ breeds: [BreedModel]) -> Void, errorHandler: @escaping ErrorHandler) {
-    
     let searchURL = BaseWebService.getBaseURL() + "breeds"
-    
     NetworkManager.sharedInstance.GET(searchURL,
                                       params: nil,
                                       completionHandler: processResponse({ (data) -> Void in
-        
         if data != nil {
-            
             let response = JSON(data!)
             guard let responseArray = response.array else { return }
             var breedArray: [BreedModel] = []
@@ -28,7 +24,6 @@ class BreedService: BaseWebService {
             }
             return callback(breedArray)
         }
-    
         errorHandler(NSError.initWithMessage("Error parsing Get Random Cat Response"))
         
         }, errorHandler: errorHandler))

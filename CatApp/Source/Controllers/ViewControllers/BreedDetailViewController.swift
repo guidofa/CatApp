@@ -13,12 +13,7 @@ class BreedDetailViewController: UIViewController, WKUIDelegate, WKNavigationDel
     @IBOutlet fileprivate var webView: WKWebView!
     var breed: BreedModel?
     
-    override func loadView() {
-        let webConfiguration = WKWebViewConfiguration()
-        webView = WKWebView(frame: .zero, configuration: webConfiguration)
-        webView.uiDelegate = self
-        view = webView
-    }
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let urlString = breed?.wikiURL else { return }
@@ -27,6 +22,14 @@ class BreedDetailViewController: UIViewController, WKUIDelegate, WKNavigationDel
         webView.navigationDelegate = self
     }
     
+    override func loadView() {
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.uiDelegate = self
+        view = webView
+    }
+    
+    // WKNavigationDelegate functions
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         view.showLoader()
     }

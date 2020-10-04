@@ -9,5 +9,5 @@
 import Foundation
 
 protocol NavigationDelegate: class {
-    func goToNextView()
+    func goToNextView(_ toView: MenuOptions)
 }
