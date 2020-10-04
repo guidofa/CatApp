@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     @IBOutlet fileprivate weak var catImageView: UIImageView!
+    @IBOutlet fileprivate weak var footerView: UIView!
+    @IBOutlet fileprivate weak var favImageView: UIImageView!
     @IBAction private func nextCat() {
         setACatImage()
     }
@@ -17,19 +19,29 @@ class HomeViewController: BaseViewController {
         addTheImageToFavourite()
     }
     fileprivate var imageId: String?
+    fileprivate enum HeartImages: String {
+        case activeHeart = "heart_active"
+        case inactiveHeart = "heart_inactive"
+    }
+    
     
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        styleFooterView()
         setACatImage()
     }
     
+    func styleFooterView() {
+        footerView.layer.borderWidth = 1
+        footerView.layer.borderColor = ColorHelper.cobaltTurquoise().cgColor
+    }
+    
     func setACatImage() {
-        // What happen if the URL is nil ?
         view.showLoader()
         HomeService.getRandomCat({ (randomCat) in
             self.imageId = randomCat.id
-            self.catImageView.load(url: URL(string: randomCat.url!)!, view: self.view)
+            self.catImageView.load(url: URL(string: randomCat.url!)!, vc: self)
         }, errorHandler: { (error) -> Void in
             self.view.hideLoader()
             print(error?.localizedDescription ?? "")
@@ -37,14 +49,20 @@ class HomeViewController: BaseViewController {
     }
     
     func addTheImageToFavourite() {
+        favImageView.image = UIImage(named: HeartImages.activeHeart.rawValue)
         guard let id = imageId else { return }
-        FavouriteService.addFavourite(id, subId: AppConfig.shared.getUserId(), callback: { (message) in
-            self.showAlertWithOneAction(title: message, message: "The image has been successfully added to your favourites", alertActionTitle: "Accept")
+        FavouriteService.addFavourite(id, subId: AppConfig.shared.getUserId(), callback: { (_) in
+            
         }, errorHandler: { (error) -> Void in
             self.showAlertWithOneAction(title: "Something went wrong",
                                         message: "Are you sure that this is image is not already in your favourites?",
                                         alertActionTitle: "Accept")
         })
+    }
+    
+    func imageLoaded() {
+        favImageView.image = UIImage(named: HeartImages.inactiveHeart.rawValue)
+        view.hideLoader()
     }
 }
 
