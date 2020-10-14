@@ -68,9 +68,9 @@ class HomeViewController: BaseViewController {
 
 extension HomeViewController: NavigationDelegate {
     func goToNextView(_ toView: MenuOptions) {
-        view.showLoader()
         switch toView {
         case .breeds:
+            view.showLoader()
             BreedService.getBreeds({ (breeds) in
                 self.view.hideLoader()
                 self.goToBreeds(with: breeds)
@@ -79,7 +79,15 @@ extension HomeViewController: NavigationDelegate {
                 print(error?.localizedDescription ?? "")
             })
         case .favourites:
-            print("Go to favourites")
+            view.showLoader()
+            FavouriteService.getFavourites(subId: AppConfig.shared.getUserId(),
+                                           callback: { (favourites) in
+                                            self.view.hideLoader()
+                                            self.goToFavourites(favs: favourites)
+                                           }, errorHandler: { (error) in
+                                            self.view.hideLoader()
+                                            print(error?.localizedDescription ?? "")
+                                           })
         case .home:
             showAlertWithOneAction(title: "Error", message: "Something went wrong", alertActionTitle: "OK")
         }

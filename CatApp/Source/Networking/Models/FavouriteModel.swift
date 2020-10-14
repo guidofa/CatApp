@@ -13,11 +13,13 @@ class FavouriteModel {
     var imageId: String?
     var subId: String?
     var createdAt: String?
+    var image: ImageModel?
     
     init(json: JSON) {
         id = json["id"].stringValue
         imageId = json["image_id"].stringValue
         subId = json["sub_id"].stringValue
         createdAt = json["created_at"].stringValue
+        image = ImageModel(json: json["image"])
     }
 }

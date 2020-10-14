@@ -15,7 +15,7 @@ enum MenuOptions {
 }
 class SideMenuViewController: UIViewController {
     @IBOutlet fileprivate var tableView: UITableView!
-    fileprivate let menuItems: [String] = ["Home", "Breeds"]
+    fileprivate let menuItems: [String] = ["Home", "Breeds", "Favourites"]
     weak var delegate: NavigationDelegate?
     
     // MARK: Life Cycle

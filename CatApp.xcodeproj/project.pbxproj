@@ -22,6 +22,8 @@
 		12528D7F2517461A00B6B938 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D7E2517461A00B6B938 /* HomeService.swift */; };
 		12528D8125174C9200B6B938 /* BreedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D8025174C9200B6B938 /* BreedModel.swift */; };
 		12528D8325174D2300B6B938 /* BreedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12528D8225174D2300B6B938 /* BreedService.swift */; };
+		126981D52537C01E006A840D /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126981D42537C01E006A840D /* FavouritesViewController.swift */; };
+		126981D82537C71B006A840D /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126981D72537C71B006A840D /* ImageModel.swift */; };
 		1269FC83251FD21800C1FBC9 /* BreedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1269FC82251FD21800C1FBC9 /* BreedDetailViewController.swift */; };
 		127C8E6925291536002D84B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127C8E6725291536002D84B3 /* Main.storyboard */; };
 		128314892517CE6A001B0C78 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128314882517CE6A001B0C78 /* MenuCell.swift */; };
@@ -53,6 +55,8 @@
 		12528D7E2517461A00B6B938 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		12528D8025174C9200B6B938 /* BreedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModel.swift; sourceTree = "<group>"; };
 		12528D8225174D2300B6B938 /* BreedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedService.swift; sourceTree = "<group>"; };
+		126981D42537C01E006A840D /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		126981D72537C71B006A840D /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		1269FC82251FD21800C1FBC9 /* BreedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewController.swift; sourceTree = "<group>"; };
 		127C8E6825291536002D84B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		128314882517CE6A001B0C78 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				121696B0251984070050917A /* BreedsViewController.swift */,
 				12ED8C5325166B4400EAB428 /* HomeViewController.swift */,
 				1299D19C25175B210060DCFC /* SideMenuViewController.swift */,
+				126981D42537C01E006A840D /* FavouritesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 				12ED8C6325168B0C00EAB428 /* RandomCatResponseModel.swift */,
 				12528D8025174C9200B6B938 /* BreedModel.swift */,
 				12A8486525201BDC007CB00D /* FavouriteModel.swift */,
+				126981D72537C71B006A840D /* ImageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -392,6 +398,7 @@
 				12ED8C6425168B0C00EAB428 /* RandomCatResponseModel.swift in Sources */,
 				1269FC83251FD21800C1FBC9 /* BreedDetailViewController.swift in Sources */,
 				12528D7725173FFF00B6B938 /* NSErrorExtension.swift in Sources */,
+				126981D82537C71B006A840D /* ImageModel.swift in Sources */,
 				1299D19D25175B210060DCFC /* SideMenuViewController.swift in Sources */,
 				12942194251A4078006C401B /* BreedCell.swift in Sources */,
 				121696A52518CA9F0050917A /* BaseViewController.swift in Sources */,
@@ -404,6 +411,7 @@
 				121696AF251982960050917A /* NavigationDelegate.swift in Sources */,
 				12528D7225173DA100B6B938 /* BaseWebService.swift in Sources */,
 				128314892517CE6A001B0C78 /* MenuCell.swift in Sources */,
+				126981D52537C01E006A840D /* FavouritesViewController.swift in Sources */,
 				12ED8C5225166B4400EAB428 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
