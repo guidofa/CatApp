@@ -14,6 +14,7 @@ class FavouritesViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        favs?.reverse()
         title = "Favourites"
     }
 }
