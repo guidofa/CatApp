@@ -9,18 +9,17 @@
 import SwiftyJSON
 
 class FavouriteService: BaseWebService {
-    class func addFavourite(_ imageId: String, subId: String, callback: @escaping (_ message: String) -> Void,
+    class func addFavourite(_ imageId: String, subId: String, callback: @escaping (_ favID: String?) -> Void,
                             errorHandler: @escaping ErrorHandler) {
         let url = BaseWebService.getBaseURL() + "favourites"
         let params = ["image_id": imageId, "sub_id": subId]
         NetworkManager.sharedInstance.POST(url, params: params, completionHandler: processResponse( { (data) -> Void in
             if data != nil {
                 let response = JSON(data!)
-                
-                if let response = response["message"].string {
-                    return callback(response)
+                if let favId = response["id"].int {
+                    return callback(String(favId))
                 } else {
-                    return callback("Error")
+                    return callback(nil)
                 }
             }
             errorHandler(NSError.initWithMessage("Error adding to favourites"))
@@ -47,7 +46,7 @@ class FavouriteService: BaseWebService {
     
     // This method has not been tried
     class func deleteFavourite(favId: String, callback: @escaping (_ message: String) -> Void, errorHandler: @escaping ErrorHandler) {
-        let url = BaseWebService.getBaseURL() + "favourites/" + favId
+        let url = BaseWebService.getBaseURL() + "favourites/" + String(favId)
         NetworkManager.sharedInstance.DELETE(url, params: nil, completionHandler: processResponse( { (data) -> Void in
             if data != nil {
                 let response = JSON(data!)

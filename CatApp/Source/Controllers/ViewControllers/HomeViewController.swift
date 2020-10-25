@@ -15,10 +15,15 @@ class HomeViewController: BaseViewController {
     @IBAction private func nextCat() {
         setACatImage()
     }
-    @IBAction private func addFavourite() {
-        addTheImageToFavourite()
+    @IBAction private func heartIconOnClick() {
+        if let favId = favId {
+            removeTheImageFromFavourites(favId: favId)
+        } else {
+            addTheImageToFavourites()
+        }
     }
     fileprivate var imageId: String?
+    fileprivate var favId: String?
     fileprivate enum HeartImages: String {
         case activeHeart = "heart_active"
         case inactiveHeart = "heart_inactive"
@@ -48,15 +53,27 @@ class HomeViewController: BaseViewController {
         })
     }
     
-    func addTheImageToFavourite() {
+    func addTheImageToFavourites() {
         favImageView.image = UIImage(named: HeartImages.activeHeart.rawValue)
         guard let id = imageId else { return }
-        FavouriteService.addFavourite(id, subId: AppConfig.shared.getUserId(), callback: { (_) in
-            
+        FavouriteService.addFavourite(id, subId: AppConfig.shared.getUserId(), callback: { (favId)  in
+            self.favId = favId
         }, errorHandler: { (error) -> Void in
             self.showAlertWithOneAction(title: "Something went wrong",
                                         message: "Are you sure that this is image is not already in your favourites?",
                                         alertActionTitle: "Accept")
+        })
+    }
+    
+    func removeTheImageFromFavourites(favId: String) {
+        favImageView.image = UIImage(named: HeartImages.inactiveHeart.rawValue)
+        FavouriteService.deleteFavourite(favId: favId, callback: { (_) in
+            self.favId = nil
+        }, errorHandler: { (error) -> Void in
+            self.showAlertWithOneAction(title: "Something went wrong",
+                                        message: "We couldn't remove the image from favourite please try again.",
+                                        alertActionTitle: "Accept")
+        
         })
     }
     

@@ -29,7 +29,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="As1-So-1Jb">
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="70"/>
                                                 <connections>
-                                                    <action selector="addFavourite" destination="BYZ-38-t0r" eventType="touchUpInside" id="xX5-ee-kd0"/>
+                                                    <action selector="heartIconOnClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="uYX-dI-aEo"/>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="cam-br-tyZ">
