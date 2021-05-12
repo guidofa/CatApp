@@ -16,4 +16,4 @@ Swiftyjson
 Swiftlint
 
 # Disclaimer
-The main goal of this project is just to apply my skills as an IOS Developer. This has not comercial intentions.
+The main goal of this project is just to apply my skills as an iOS Developer. This has not comercial intentions.
